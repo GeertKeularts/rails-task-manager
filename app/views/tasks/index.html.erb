@@ -1,0 +1,19 @@
+<div class="text-center">
+  <h1>List of your tasks:</h1>
+  <div class="task-list">
+    <ul>
+      <% @tasks.each do |task| %>
+      <li>
+        <% if task.complete  %>
+        <%= "[x]"  %>
+        <% else  %>
+        <%= "[ ]"  %>
+        <% end  %>
+        <%= link_to task.name, task_path(task)  %>
+      </li>
+
+      <% end  %>
+    </ul>
+    <%= link_to "Create new task", new_task_path  %>
+  </div>
+</div>

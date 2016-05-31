@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h1>What do you want to do?</h1>
+  <div class="task-list">
+    <%= form_for(@task) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

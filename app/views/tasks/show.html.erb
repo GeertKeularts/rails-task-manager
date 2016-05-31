@@ -1,0 +1,13 @@
+<div class="text-center">
+  <h1><%= @task.name %></h1>
+  <div class="task-list">
+    <%=  @task.description %>
+    <p>
+      <%= link_to "Complete",   %> <% @task.complete = true  %>
+      <%= link_to "edit", edit_task_path  %> <br>
+      <%= link_to "Delete", task_path(@task), method: :delete, 
+        data: {confirm: "Are your sure you finished?"} %> <br>
+      <%= link_to "back", tasks_path  %>
+    </p> 
+  </div>
+</div>
