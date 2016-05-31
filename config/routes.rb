@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 #create a new task
 #update a task
 #destroy a task
+resources :tasks
+root 'tasks#index'
+
 end
